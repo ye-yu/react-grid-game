@@ -1,7 +1,7 @@
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ContextProvider } from "./stores";
+import { ContextProvider } from "./stores/store";
 import { createRoot } from "react-dom/client";
 
 const container = document.getElementById("root");
