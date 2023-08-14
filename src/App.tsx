@@ -1,19 +1,12 @@
-import { AppState } from "./stores/app-state.store";
-import { useStore } from "./stores/store";
+import { DiceArea } from "./components/dice-area";
 
 export default function App() {
-  const appState = useStore(AppState);
   return (
-    <button
-      onClick={() => {
-        if (appState.theme === "light") {
-          appState.theme = "dark";
-        } else {
-          appState.theme = "light";
-        }
-      }}
-    >
-      {appState.theme}
-    </button>
+    <div className="w-full max-w-4xl mx-auto h-screen flex flex-col">
+      <div className="flex-1"></div>
+      <div className="flex-0 h-32">
+        <DiceArea />
+      </div>
+    </div>
   );
 }
