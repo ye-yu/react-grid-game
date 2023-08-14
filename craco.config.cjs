@@ -39,8 +39,11 @@ module.exports = {
         const TerserPlugin = webpackConfig.optimization.minimizer.find(
           (i) => i.constructor.name === "TerserPlugin",
         );
-        if (TerserPlugin) {
-          TerserPlugin.options.terserOptions.compress["drop_console"] = true;
+        if (TerserPlugin?.options?.terserOptions?.compress) {
+          TerserPlugin.options.terserOptions.compress.drop_console = true;
+        }
+        if (TerserPlugin?.options?.terserOptions?.drop_console) {
+          TerserPlugin.options.terserOptions.drop_console = true;
         }
       }
 
