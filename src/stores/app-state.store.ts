@@ -1,1 +1,3 @@
-export class AppState {}
+export class AppState {
+  theme: "light" | "dark" = "light";
+}
